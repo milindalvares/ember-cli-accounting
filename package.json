@@ -1,0 +1,32 @@
+{
+  "name": "ember-cli-accounting",
+  "description": "Ember CLI addon for using accounting.js",
+  "homepage": "https://github.com/cibernox/ember-cli-accounting",
+  "keywords": [
+    "accounting",
+    "number",
+    "money",
+    "currency",
+    "format",
+    "exchange",
+    "ember-cli",
+    "ember-addon"
+  ],
+  "author": "Miguel Camba",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cibernox/ember-cli-accounting.git"
+  },
+  "main": "dist/cjs/ember-cli-accounting.js",
+  "ember-addon": {
+    "main": "ember-addon-main.js"
+  },
+  "version": "0.0.1",
+  "devDependencies": {
+    "broccoli": "^0.12.3",
+    "broccoli-cli": "0.0.1",
+    "broccoli-dist-es6-module": "^0.2.1",
+    "testem": "^0.6.19"
+  }
+}

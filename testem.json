@@ -1,0 +1,7 @@
+{
+  "framework": "qunit",
+  "src_files": [
+    "dist/globals/main.js",
+    "tests/**/*.js"
+  ]
+}
