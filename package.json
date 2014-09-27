@@ -1,7 +1,8 @@
 {
-  "name": "dummy",
-  "version": "0.0.0",
-  "private": true,
+  "name": "ember-cli-accounting",
+  "description": "Ember CLI addon for using accounting.js",
+  "homepage": "https://github.com/cibernox/ember-cli-accounting",
+  "version": "0.0.2",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +12,14 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "https://github.com/stefanpenner/ember-cli",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cibernox/ember-cli-accounting.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Miguel Camba",
   "license": "MIT",
   "devDependencies": {
     "body-parser": "^1.2.0",
@@ -31,6 +35,12 @@
   },
   "keywords": [
     "ember-addon"
+    "accounting",
+    "number",
+    "money",
+    "currency",
+    "format",
+    "exchange",
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
