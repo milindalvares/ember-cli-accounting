@@ -1,3 +1,11 @@
 module.exports = {
-  name: 'ember-cli-accounting'
+  name: 'accounting'
 };
+
+// module.exports = {
+//   name: 'accounting',
+
+//   init: function() {
+//     this.treePaths['addon'] = 'src';
+//   }
+// };
