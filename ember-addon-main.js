@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'ember-cli-addon',
+  name: 'accounting',
 
   init: function() {
     this.treePaths['addon'] = 'src';
