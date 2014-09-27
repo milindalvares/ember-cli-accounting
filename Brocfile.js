@@ -1,18 +1,20 @@
-var makeModules = require('broccoli-dist-es6-module');
-var moveFile    = require('broccoli-file-mover');
+/* global require, module */
 
+var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
-var accounting = makeModules('src', {
-  global: 'accounting',
-  packageName: 'accounting',
-  main: 'accounting'
-});
+var app = new EmberAddon();
 
-accounting = moveFile(accounting, {
-  files: {
-    '/globals/main.js': '/globals/accounting.js',
-    '/named-amd/main.js': '/named-amd/accounting.js',
-  }
-});
+// Use `app.import` to add additional libraries to the generated
+// output files.
+//
+// If you need to use different assets in different
+// environments, specify an object as the first parameter. That
+// object's keys should be the environment name and the values
+// should be the asset to use in that environment.
+//
+// If the library that you are including contains AMD or ES6
+// modules that you would like to import into your application
+// please specify an object with the list of modules as keys
+// along with the exports of each module as its value.
 
-module.exports = accounting;
+module.exports = app.toTree();
