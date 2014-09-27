@@ -1,5 +1,5 @@
-import formatNumber from "ember-cli-accounting/format-number";
-import format from "ember-cli-accounting/format";
+import formatNumber from "accounting/format-number";
+import format from "accounting/format";
 
 module("format");
 

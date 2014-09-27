@@ -1,4 +1,4 @@
-import formatColumn from "ember-cli-accounting/format-column";
+import formatColumn from "accounting/format-column";
 
 module("formatColumn");
 

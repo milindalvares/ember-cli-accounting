@@ -1,4 +1,4 @@
-import formatNumber from "ember-cli-accounting/format-number";
+import formatNumber from "accounting/format-number";
 
 module("formatNumber");
 

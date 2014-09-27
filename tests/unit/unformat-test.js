@@ -1,5 +1,5 @@
-import unformat from "ember-cli-accounting/unformat";
-import { number } from "ember-cli-accounting/settings";
+import unformat from "accounting/unformat";
+import { number } from "accounting/settings";
 
 module("unformat");
 

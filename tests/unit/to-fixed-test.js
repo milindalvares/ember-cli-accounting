@@ -1,4 +1,4 @@
-import toFixed from "ember-cli-accounting/to-fixed";
+import toFixed from "accounting/to-fixed";
 
 module("toFixed");
 

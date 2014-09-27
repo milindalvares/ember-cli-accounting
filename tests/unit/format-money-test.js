@@ -1,5 +1,5 @@
-import formatMoney from "ember-cli-accounting/format-money";
-import {currency} from "ember-cli-accounting/settings";
+import formatMoney from "accounting/format-money";
+import {currency} from "accounting/settings";
 
 module("formatMoney");
 

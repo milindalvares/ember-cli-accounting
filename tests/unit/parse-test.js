@@ -1,5 +1,5 @@
-import parse from "ember-cli-accounting/parse";
-import unformat from "ember-cli-accounting/unformat";
+import parse from "accounting/parse";
+import unformat from "accounting/unformat";
 
 module("parse");
 
