@@ -1,13 +1,13 @@
 "use strict";
-var format = require("./accounting/format")["default"] || require("./accounting/format");
-var formatColumn = require("./accounting/format-column")["default"] || require("./accounting/format-column");
-var formatMoney = require("./accounting/format-money")["default"] || require("./accounting/format-money");
-var formatNumber = require("./accounting/format-number")["default"] || require("./accounting/format-number");
-var parse = require("./accounting/parse")["default"] || require("./accounting/parse");
-var settings = require("./accounting/settings")["default"] || require("./accounting/settings");
-var toFixed = require("./accounting/to-fixed")["default"] || require("./accounting/to-fixed");
-var unformat = require("./accounting/unformat")["default"] || require("./accounting/unformat");
-var version = require("./accounting/version")["default"] || require("./accounting/version");
+var format = require("./format")["default"] || require("./format");
+var formatColumn = require("./format-column")["default"] || require("./format-column");
+var formatMoney = require("./format-money")["default"] || require("./format-money");
+var formatNumber = require("./format-number")["default"] || require("./format-number");
+var parse = require("./parse")["default"] || require("./parse");
+var settings = require("./settings")["default"] || require("./settings");
+var toFixed = require("./to-fixed")["default"] || require("./to-fixed");
+var unformat = require("./unformat")["default"] || require("./unformat");
+var version = require("./version")["default"] || require("./version");
 
 exports.format = format;
 exports.formatColumn = formatColumn;

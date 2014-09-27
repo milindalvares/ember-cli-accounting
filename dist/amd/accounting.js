@@ -1,5 +1,5 @@
 define(
-  ["./accounting/format","./accounting/format-column","./accounting/format-money","./accounting/format-number","./accounting/parse","./accounting/settings","./accounting/to-fixed","./accounting/unformat","./accounting/version","exports"],
+  ["./format","./format-column","./format-money","./format-number","./parse","./settings","./to-fixed","./unformat","./version","exports"],
   function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __dependency5__, __dependency6__, __dependency7__, __dependency8__, __dependency9__, __exports__) {
     "use strict";
     var format = __dependency1__["default"] || __dependency1__;

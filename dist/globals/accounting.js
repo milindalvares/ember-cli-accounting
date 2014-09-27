@@ -1,14 +1,14 @@
 !function(e){if("object"==typeof exports)module.exports=e();else if("function"==typeof define&&define.amd)define(e);else{var n;"undefined"!=typeof window?n=window:"undefined"!=typeof global?n=global:"undefined"!=typeof self&&(n=self),n.accounting=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
 "use strict";
-var format = _dereq_("./accounting/format")["default"] || _dereq_("./accounting/format");
-var formatColumn = _dereq_("./accounting/format-column")["default"] || _dereq_("./accounting/format-column");
-var formatMoney = _dereq_("./accounting/format-money")["default"] || _dereq_("./accounting/format-money");
-var formatNumber = _dereq_("./accounting/format-number")["default"] || _dereq_("./accounting/format-number");
-var parse = _dereq_("./accounting/parse")["default"] || _dereq_("./accounting/parse");
-var settings = _dereq_("./accounting/settings")["default"] || _dereq_("./accounting/settings");
-var toFixed = _dereq_("./accounting/to-fixed")["default"] || _dereq_("./accounting/to-fixed");
-var unformat = _dereq_("./accounting/unformat")["default"] || _dereq_("./accounting/unformat");
-var version = _dereq_("./accounting/version")["default"] || _dereq_("./accounting/version");
+var format = _dereq_("./format")["default"] || _dereq_("./format");
+var formatColumn = _dereq_("./format-column")["default"] || _dereq_("./format-column");
+var formatMoney = _dereq_("./format-money")["default"] || _dereq_("./format-money");
+var formatNumber = _dereq_("./format-number")["default"] || _dereq_("./format-number");
+var parse = _dereq_("./parse")["default"] || _dereq_("./parse");
+var settings = _dereq_("./settings")["default"] || _dereq_("./settings");
+var toFixed = _dereq_("./to-fixed")["default"] || _dereq_("./to-fixed");
+var unformat = _dereq_("./unformat")["default"] || _dereq_("./unformat");
+var version = _dereq_("./version")["default"] || _dereq_("./version");
 
 exports.format = format;
 exports.formatColumn = formatColumn;
@@ -29,7 +29,7 @@ exports.version = version;exports["default"] = {
   unformat: unformat,
   version: version
 }
-},{"./accounting/format":5,"./accounting/format-column":2,"./accounting/format-money":3,"./accounting/format-number":4,"./accounting/parse":6,"./accounting/settings":7,"./accounting/to-fixed":8,"./accounting/unformat":9,"./accounting/version":11}],2:[function(_dereq_,module,exports){
+},{"./format":5,"./format-column":2,"./format-money":3,"./format-number":4,"./parse":6,"./settings":7,"./to-fixed":8,"./unformat":9,"./version":11}],2:[function(_dereq_,module,exports){
 "use strict";
 var currency = _dereq_("./settings").currency;
 var defaults = _dereq_("./utils").defaults;

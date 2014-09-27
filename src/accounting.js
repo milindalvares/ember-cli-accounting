@@ -1,12 +1,12 @@
-import format from "./accounting/format";
-import formatColumn from "./accounting/format-column";
-import formatMoney from "./accounting/format-money";
-import formatNumber from "./accounting/format-number";
-import parse from "./accounting/parse";
-import settings from "./accounting/settings";
-import toFixed from "./accounting/to-fixed";
-import unformat from "./accounting/unformat";
-import version from "./accounting/version";
+import format from "./format";
+import formatColumn from "./format-column";
+import formatMoney from "./format-money";
+import formatNumber from "./format-number";
+import parse from "./parse";
+import settings from "./settings";
+import toFixed from "./to-fixed";
+import unformat from "./unformat";
+import version from "./version";
 
 export {
   format,

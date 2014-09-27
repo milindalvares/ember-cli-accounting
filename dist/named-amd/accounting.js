@@ -1,5 +1,5 @@
 define("accounting",
-  ["./accounting/format","./accounting/format-column","./accounting/format-money","./accounting/format-number","./accounting/parse","./accounting/settings","./accounting/to-fixed","./accounting/unformat","./accounting/version","exports"],
+  ["./format","./format-column","./format-money","./format-number","./parse","./settings","./to-fixed","./unformat","./version","exports"],
   function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __dependency5__, __dependency6__, __dependency7__, __dependency8__, __dependency9__, __exports__) {
     "use strict";
     var format = __dependency1__["default"] || __dependency1__;
@@ -32,7 +32,7 @@ define("accounting",
       version: version
     }
   });
-define("accounting/accounting/format-column",
+define("accounting/format-column",
   ["./settings","./utils","./format-number","./unformat","exports"],
   function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __exports__) {
     "use strict";
@@ -113,7 +113,7 @@ define("accounting/accounting/format-column",
 
     __exports__["default"] = formatColumn;
   });
-define("accounting/accounting/format-money",
+define("accounting/format-money",
   ["./unformat","./format-number","./settings","./utils","exports"],
   function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __exports__) {
     "use strict";
@@ -171,7 +171,7 @@ define("accounting/accounting/format-money",
 
     __exports__["default"] = formatMoney;
   });
-define("accounting/accounting/format-number",
+define("accounting/format-number",
   ["./settings","./utils","./unformat","./to-fixed","exports"],
   function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __exports__) {
     "use strict";
@@ -226,7 +226,7 @@ define("accounting/accounting/format-number",
 
     __exports__["default"] = formatNumber;
   });
-define("accounting/accounting/format",
+define("accounting/format",
   ["./format-number","exports"],
   function(__dependency1__, __exports__) {
     "use strict";
@@ -236,7 +236,7 @@ define("accounting/accounting/format",
      */
     __exports__["default"] = formatNumber;
   });
-define("accounting/accounting/parse",
+define("accounting/parse",
   ["./unformat","exports"],
   function(__dependency1__, __exports__) {
     "use strict";
@@ -246,7 +246,7 @@ define("accounting/accounting/parse",
      */
     __exports__["default"] = unformat;
   });
-define("accounting/accounting/settings",
+define("accounting/settings",
   ["exports"],
   function(__exports__) {
     "use strict";
@@ -268,7 +268,7 @@ define("accounting/accounting/settings",
     __exports__.currency = currency;
     __exports__.number = number;
   });
-define("accounting/accounting/to-fixed",
+define("accounting/to-fixed",
   ["./utils","./settings","./unformat","exports"],
   function(__dependency1__, __dependency2__, __dependency3__, __exports__) {
     "use strict";
@@ -290,7 +290,7 @@ define("accounting/accounting/to-fixed",
       return (Math.round(unformat(value) * power) / power).toFixed(precision);
     };
   });
-define("accounting/accounting/unformat",
+define("accounting/unformat",
   ["./settings","exports"],
   function(__dependency1__, __exports__) {
     "use strict";
@@ -341,7 +341,7 @@ define("accounting/accounting/unformat",
 
     __exports__["default"] = unformat;
   });
-define("accounting/accounting/utils",
+define("accounting/utils",
   ["./settings","exports"],
   function(__dependency1__, __exports__) {
     "use strict";
@@ -445,7 +445,7 @@ define("accounting/accounting/utils",
       checkCurrencyFormat: checkCurrencyFormat,
     };
   });
-define("accounting/accounting/version",
+define("accounting/version",
   ["exports"],
   function(__exports__) {
     "use strict";
