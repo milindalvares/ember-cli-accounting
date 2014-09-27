@@ -34,7 +34,7 @@
     "glob": "^4.0.5"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
     "accounting",
     "number",
     "money",
