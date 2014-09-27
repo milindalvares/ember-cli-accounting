@@ -28,9 +28,10 @@ import accounting from "accounting"
 Although this is almost a 1:1 port of accountant.js, there is a few differences:
 
 * Each function of accountant.js lives in its own module, so you can only import those functions you want to use.
-* Removed polifills for things like Array.prototype.map. Since this is going to be used with ember, we can
-give for granted that those functions will be there.
+* Removed some polifills for `Array.isArray`, `Array.prototype.map` and `Object.prototype.toString`. 
+They are not required in modern browsers, and ember.js (unless you opt-out with `EXTEND_PROTOTYPES = false`) already provides polifills for those functions.
 * More tests than the original.
+* Enforced jshint. Cleaner code.
 
 ## Versioning
 
@@ -42,6 +43,8 @@ import version from "accounting/version";
 
 console.log(version) // => "0.4.1"
 ```
+
+I'll try to keep it always up to date with any bugfix or new feature in the original library.
 
 ## Documentation
 
