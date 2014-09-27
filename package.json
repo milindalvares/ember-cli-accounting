@@ -40,7 +40,7 @@
     "money",
     "currency",
     "format",
-    "exchange",
+    "exchange"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
