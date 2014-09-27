@@ -2,32 +2,47 @@
   "name": "ember-cli-accounting",
   "description": "Ember CLI addon for using accounting.js",
   "homepage": "https://github.com/cibernox/ember-cli-accounting",
+  "version": "0.0.2",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "ember server",
+    "build": "ember build",
+    "test": "ember test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cibernox/ember-cli-accounting.git"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "author": "Miguel Camba",
+  "license": "MIT",
+  "devDependencies": {
+    "body-parser": "^1.2.0",
+    "broccoli-asset-rev": "0.1.1",
+    "broccoli-ember-hbs-template-compiler": "^1.6.1",
+    "ember-cli": "0.0.46",
+    "ember-cli-ic-ajax": "0.1.1",
+    "ember-cli-inject-live-reload": "^1.0.2",
+    "ember-cli-qunit": "0.1.0",
+    "ember-data": "1.0.0-beta.10",
+    "express": "^4.8.5",
+    "glob": "^4.0.5"
+  },
   "keywords": [
+    "ember-addon"
     "accounting",
     "number",
     "money",
     "currency",
     "format",
     "exchange",
-    "ember-cli",
-    "ember-addon"
   ],
-  "author": "Miguel Camba",
-  "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/cibernox/ember-cli-accounting.git"
-  },
-  "main": "dist/cjs/ember-cli-accounting.js",
   "ember-addon": {
-    "main": "ember-addon-main.js"
-  },
-  "version": "0.0.1",
-  "devDependencies": {
-    "broccoli": "^0.12.3",
-    "broccoli-cli": "0.0.1",
-    "broccoli-dist-es6-module": "^0.2.1",
-    "broccoli-file-mover": "^0.3.6",
-    "testem": "^0.6.19"
+    "configPath": "tests/dummy/config"
   }
 }
