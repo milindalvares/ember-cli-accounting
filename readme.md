@@ -1,25 +1,49 @@
 # Ember-cli-accounting
 
-This README outlines the details of collaborating on this Ember addon.
+This is a port of the great [accounting.js](https://github.com/openexchangerates/accounting.js) library to
+ES6 modules that integrates seamlessly with ember-cli.
 
-## Installation
+## Instalation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+Just add like any other ember-cli addon:
 
-## Running
+`npm install ember-cli-accounting --save-dev`
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+## Usage
 
-## Running Tests
+You no longer need to access the global accounting, you can import only what you need:
 
-* `ember test`
-* `ember test --server`
+```js
+import formatMoney from "accounting/format-money"
+```
 
-## Building
+Althoug you can import everything as expected:
 
-* `ember build`
+```js
+import accounting from "accounting"
+```
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+## Differences with accounting.js
+
+Although this is almost a 1:1 port of accountant.js, there is a few differences:
+
+* Each function of accountant.js lives in its own module, so you can only import those functions you want to use.
+* Removed polifills for things like Array.prototype.map. Since this is going to be used with ember, we can
+give for granted that those functions will be there.
+* More tests than the original.
+
+## Versioning
+
+At the time of writting, this addon bundles the same funcionality than accounting version 0.4.1.
+This addon's version don't match accounting's version. However, you can check accounting's version easily:
+
+```js
+import version from "accounting/version";
+
+console.log(version) // => "0.4.1"
+```
+
+## Documentation
+
+This library does not make any change in the public api of accounting.js, so you can read the official
+documentation [here](http://openexchangerates.github.io/accounting.js/)
