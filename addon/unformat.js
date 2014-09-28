@@ -32,13 +32,13 @@ function unformat(value, decimal) {
   decimal = decimal || number.decimal;
 
    // Build regex to strip out everything except digits, decimal point and minus sign:
-  var regex = new RegExp("[^0-9-" + decimal + "]", ["g"]),
-    unformatted = parseFloat(
-      ("" + value)
-      .replace(/\((.*)\)/, "-$1") // replace bracketed values with negatives
-      .replace(regex, '')         // strip out any cruft
-      .replace(decimal, '.')      // make sure decimal point is standard
-    );
+  var regex = new RegExp("[^0-9-" + decimal + "]", ["g"]);
+  var unformatted = parseFloat(
+    ("" + value)
+    .replace(/\((.*)\)/, "-$1") // replace bracketed values with negatives
+    .replace(regex, '')         // strip out any cruft
+    .replace(decimal, '.')      // make sure decimal point is standard
+  );
 
   // This will fail silently which may cause trouble, let's wait and see:
   return !isNaN(unformatted) ? unformatted : 0;

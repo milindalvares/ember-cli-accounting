@@ -35,13 +35,13 @@ function formatMoney(number, symbol, precision, thousand, decimal, format) {
         format : format
       }),
       currency
-    ),
+    );
 
-    // Check format (returns object with pos, neg and zero):
-    formats = checkCurrencyFormat(opts.format),
+  // Check format (returns object with pos, neg and zero):
+  var formats = checkCurrencyFormat(opts.format);
 
-    // Choose which format to use for this value:
-    useFormat = number > 0 ? formats.pos : number < 0 ? formats.neg : formats.zero;
+  // Choose which format to use for this value:
+  var useFormat = number > 0 ? formats.pos : number < 0 ? formats.neg : formats.zero;
 
   // Return with currency symbol added:
   return useFormat.replace('%s', opts.symbol).replace('%v', formatNumber(Math.abs(number), checkPrecision(opts.precision), opts.thousand, opts.decimal));
