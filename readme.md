@@ -1,4 +1,4 @@
-# Ember-cli-accounting
+# Ember-cli-accounting ![travis-badge](https://travis-ci.org/cibernox/ember-cli-accounting.svg?branch=master)
 
 This is a port of the great [accounting.js](https://github.com/openexchangerates/accounting.js) library to
 ES6 modules that integrates seamlessly with ember-cli.
