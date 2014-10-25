@@ -1,0 +1,12 @@
+{
+  "name": "ember-cli-accounting",
+  "description": "Ember CLI addon for using accounting.js",
+  "version": "0.0.2",
+  "options": {
+    "paths": [
+      "addon"
+    ],
+    "exclude": "vendor",
+    "outdir": "docs"
+  }
+}
