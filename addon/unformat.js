@@ -11,6 +11,12 @@ import { number } from "./settings";
  * Also matches bracketed negatives (eg. "$ (1.99)" => -1.99)
  *
  * Doesn't throw any errors (`NaN`s become 0) but this may change in future
+ *
+ * @method unformat
+ * @for accounting
+ * @param value {String} The string containing the a formated number to parse.
+ * @param decimal {Number} Number of decimal digits of the resultant number
+ * @return {Number} The parsed number
  */
 function unformat(value, decimal) {
   // Recursively unformat arrays:

@@ -14,11 +14,11 @@ var numberSettings = number;
  *
  * @method formatNumber
  * @for accounting
- * @param *number {Number} The number to be formatted.
- * @param *precision {Object|Number} The number of decimal digits to use or an object of options that
+ * @param number {Number} The number to be formatted.
+ * @param precision {Object|Number} The number of decimal digits to use or an object of options that
  *                                contains the items of the signature except the number, for convenience.
- * @param *thousand
- * @param *decimal
+ * @param thousand
+ * @param decimal
  * @return {String} The given number properly formatted.
  */
 function formatNumber(number, precision, thousand, decimal) {

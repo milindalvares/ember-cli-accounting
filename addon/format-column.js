@@ -14,13 +14,13 @@ import unformat from "./unformat";
  *
  * @method formatColumn
  * @for accounting
- * @param *list {Array<Number>} An array of numbers to format
- * @param *symbol {Object|String} String with the currency symbol or an object of options that
+ * @param list {Array<Number>} An array of numbers to format
+ * @param symbol {Object|String} String with the currency symbol or an object of options that
  *                                contains the items of the signature except the list, for convenience
- * @param *precision
- * @param *thousand
- * @param *decimal
- * @param *format
+ * @param precision
+ * @param thousand
+ * @param decimal
+ * @param format
  * @return {Array<String>} array of accouting-formatted number strings of same length
  */
 function formatColumn(list, symbol, precision, thousand, decimal, format) {
