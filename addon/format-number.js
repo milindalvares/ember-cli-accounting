@@ -11,6 +11,15 @@ var numberSettings = number;
  *
  * Localise by overriding the precision and thousand / decimal separators
  * 2nd parameter `precision` can be an object matching `settings.number`
+ *
+ * @method formatNumber
+ * @for accounting
+ * @param *number {Number} The number to be formatted.
+ * @param *precision {Object|Number} The number of decimal digits to use or an object of options that
+ *                                contains the items of the signature except the number, for convenience.
+ * @param *thousand
+ * @param *decimal
+ * @return {String} The given number properly formatted.
  */
 function formatNumber(number, precision, thousand, decimal) {
   // Resursively format arrays:

@@ -7,13 +7,21 @@ import unformat from "./unformat";
  * Format a list of numbers into an accounting column, padding with whitespace
  * to line up currency symbols, thousand separators and decimals places
  *
- * List should be an array of numbers
  * Second parameter can be an object containing keys that match the params
- *
- * Returns array of accouting-formatted number strings of same length
  *
  * NB: `white-space:pre` CSS rule is required on the list container to prevent
  * browsers from collapsing the whitespace in the output strings.
+ *
+ * @method formatColumn
+ * @for accounting
+ * @param *list {Array<Number>} An array of numbers to format
+ * @param *symbol {Object|String} String with the currency symbol or an object of options that
+ *                                contains the items of the signature except the list, for convenience
+ * @param *precision
+ * @param *thousand
+ * @param *decimal
+ * @param *format
+ * @return {Array<String>} array of accouting-formatted number strings of same length
  */
 function formatColumn(list, symbol, precision, thousand, decimal, format) {
   if (!list) {
