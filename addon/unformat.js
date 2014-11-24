@@ -12,11 +12,15 @@ import { number } from "./settings";
  *
  * Doesn't throw any errors (`NaN`s become 0) but this may change in future
  *
+ * ```js
+ *  accounting.unformat("£ 12,345,678.90 GBP"); // 12345678.9
+ * ```
+ *
  * @method unformat
  * @for accounting
- * @param value {String} The string containing the a formated number to parse.
+ * @param value {String|Array<String>} The string or array of strings containing the number/s to parse.
  * @param decimal {Number} Number of decimal digits of the resultant number
- * @return {Number} The parsed number
+ * @return {Float} The parsed number
  */
 function unformat(value, decimal) {
   // Recursively unformat arrays:

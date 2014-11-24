@@ -7,6 +7,17 @@ import unformat from "./unformat";
  *
  * Fixes binary rounding issues (eg. (0.615).toFixed(2) === "0.61") that present
  * problems for accounting- and finance-related software.
+ *
+ * ```js
+ *  (0.615).toFixed(2);           // "0.61" (native toFixed has rounding issues)
+ *  accounting.toFixed(0.615, 2); // "0.62"
+ * ```
+ *
+ * @method toFixed
+ * @for accounting
+ * @param value {Float} The float to be treated as a decimal number.
+ * @param [precision] {Number} The number of decimal digits to keep.
+ * @return {String} The given number transformed into a string with the given precission
  */
 export default function toFixed(value, precision) {
   precision = checkPrecision(precision, number.precision);

@@ -12,7 +12,19 @@ import { defaults, checkPrecision, isObject, checkCurrencyFormat } from "./utils
  * Localise by overriding the symbol, precision, thousand / decimal separators and format
  * Second param can be an object matching `settings.currency` which is the easiest way.
  *
- * To do: tidy up the parameters
+ * ```js
+ * // Default usage:
+ * accounting.formatMoney(12345678); // $12,345,678.00
+ *
+ * // European formatting (custom symbol and separators), can also use options object as second parameter:
+ * accounting.formatMoney(4999.99, "€", 2, ".", ","); // €4.999,99
+ *
+ * // Negative values can be formatted nicely:
+ * accounting.formatMoney(-500000, "£ ", 0); // £ -500,000
+ *
+ * // Simple `format` string allows control of symbol position (%v = value, %s = symbol):
+ * accounting.formatMoney(5318008, { symbol: "GBP",  format: "%v %s" }); // 5,318,008.00 GBP
+ * ```
  *
  * @method formatMoney
  * @for accounting

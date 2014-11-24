@@ -12,6 +12,11 @@ var numberSettings = number;
  * Localise by overriding the precision and thousand / decimal separators
  * 2nd parameter `precision` can be an object matching `settings.number`
  *
+ * ```js
+ * accounting.formatNumber(5318008);              // 5,318,008
+ * accounting.formatNumber(9876543.21, 3, " "); // 9 876 543.210
+ * ```
+ *
  * @method formatNumber
  * @for accounting
  * @param number {Number} The number to be formatted.
