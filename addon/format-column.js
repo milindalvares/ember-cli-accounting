@@ -12,15 +12,18 @@ import unformat from "./unformat";
  * NB: `white-space:pre` CSS rule is required on the list container to prevent
  * browsers from collapsing the whitespace in the output strings.
  *
+ * ```js
+ * accounting.formatColumn([123.5, 3456.49, 777888.99, 12345678, -5432], "$ ");
+ * ```
+ *
  * @method formatColumn
  * @for accounting
- * @param list {Array<Number>} An array of numbers to format
- * @param symbol {Object|String} String with the currency symbol or an object of options that
- *                                contains the items of the signature except the list, for convenience
- * @param precision
- * @param thousand
- * @param decimal
- * @param format
+ * @param {Array<Number>} list An array of numbers to format
+ * @param {Object|String} [symbol="$"] String with the currency symbol. For conveniency if can be an object containing all the options of the method.
+ * @param {Integer}       [precision=2] Number of decimal digits
+ * @param {String}        [thousand=','] String with the thousands separator.
+ * @param {String}        [decimal="."] String with the decimal separator.
+ * @param {String}        [format="%s%v"] String with the format to apply, where %s is the currency symbol and %v is the value.
  * @return {Array<String>} array of accouting-formatted number strings of same length
  */
 function formatColumn(list, symbol, precision, thousand, decimal, format) {

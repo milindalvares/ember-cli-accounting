@@ -28,13 +28,12 @@ import { defaults, checkPrecision, isObject, checkCurrencyFormat } from "./utils
  *
  * @method formatMoney
  * @for accounting
- * @param number {Number} The number to be formatted.
- * @param symbol {Object|String} String with the currency symbol or an object of options that
- *                                contains the items of the signature except the number, for convenience.
- * @param precision
- * @param thousand
- * @param decimal
- * @param format
+ * @param {Number}        number Number to be formatted.
+ * @param {Object|String} [symbol="$"] String with the currency symbol. For conveniency if can be an object containing all the options of the method.
+ * @param {Integer}       [precision=2] Number of decimal digits
+ * @param {String}        [thousand=','] String with the thousands separator.
+ * @param {String}        [decimal="."] String with the decimal separator.
+ * @param {String}        [format="%s%v"] String with the format to apply, where %s is the currency symbol and %v is the value.
  * @return {String} The given number properly formatted as money.
  */
 function formatMoney(number, symbol, precision, thousand, decimal, format) {

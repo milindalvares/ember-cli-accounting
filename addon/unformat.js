@@ -18,8 +18,8 @@ import { number } from "./settings";
  *
  * @method unformat
  * @for accounting
- * @param value {String|Array<String>} The string or array of strings containing the number/s to parse.
- * @param decimal {Number} Number of decimal digits of the resultant number
+ * @param {String|Array<String>} value The string or array of strings containing the number/s to parse.
+ * @param {Number}               decimal Number of decimal digits of the resultant number
  * @return {Float} The parsed number
  */
 function unformat(value, decimal) {

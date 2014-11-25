@@ -19,11 +19,10 @@ var numberSettings = number;
  *
  * @method formatNumber
  * @for accounting
- * @param number {Number} The number to be formatted.
- * @param precision {Object|Number} The number of decimal digits to use or an object of options that
- *                                contains the items of the signature except the number, for convenience.
- * @param thousand
- * @param decimal
+ * @param {Number}        number The number to be formatted.
+ * @param {Integer}       [precision=2] Number of decimal digits
+ * @param {String}        [thousand=','] String with the thousands separator.
+ * @param {String}        [decimal="."] String with the decimal separator.
  * @return {String} The given number properly formatted.
  */
 function formatNumber(number, precision, thousand, decimal) {

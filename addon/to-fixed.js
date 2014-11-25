@@ -15,8 +15,8 @@ import unformat from "./unformat";
  *
  * @method toFixed
  * @for accounting
- * @param value {Float} The float to be treated as a decimal number.
- * @param [precision] {Number} The number of decimal digits to keep.
+ * @param Float}   value         The float to be treated as a decimal number.
+ * @param {Number} [precision=2] The number of decimal digits to keep.
  * @return {String} The given number transformed into a string with the given precission
  */
 export default function toFixed(value, precision) {
