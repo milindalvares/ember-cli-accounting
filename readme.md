@@ -11,16 +11,34 @@ Just add like any other ember-cli addon:
 
 ## Usage
 
+### Accounting functions
+
 You no longer need to access the global accounting, you can import only what you need:
 
 ```js
 import formatMoney from "accounting/format-money"
 ```
 
-Althoug you can import everything as expected:
+Although you can import everything as expected:
 
 ```js
 import accounting from "accounting"
+```
+
+### Handlebars helpers
+
+This addon also registers 2 handy helpers in your application: `format-number` and `format-money`.
+
+You can set options using bound or unbound options like this:
+
+```hbs
+{{format-money price symbol=selectedCurrency format="%v %s"}} <!-- "123.45 £" -->
+```
+
+Any option not set will have the usual default value:
+
+```hbs
+{{format-number "1234.567" precision=2}} <!-- "1,234.57" -->
 ```
 
 ## Differences with accounting.js
