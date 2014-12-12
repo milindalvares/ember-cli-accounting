@@ -1,5 +1,9 @@
 # ember-cli-accounting changelog
 
+### 0.0.4
+* [FEATURE] Helpers works with HTMLBars :)
+* [ENHALCEMENT] Addon tested simultaneously in release/beta/canary/canary+htmlbars embers
+
 ### 0.0.3
 * [ENHALCEMENT] Improved readme.
 * [BUGFIX] Fix wrong imports in tests.
