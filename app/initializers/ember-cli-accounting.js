@@ -2,9 +2,11 @@ import formatNumberHelper from 'accounting/helpers/format-number';
 import formatMoneyHelper from 'accounting/helpers/format-money';
 import Ember from 'ember';
 
+var helper = (Ember.HTMLBars || Ember.Handlebars).helper;
+
 export var initialize = function(/* container, app */) {
-  Ember.Handlebars.registerBoundHelper('format-number', formatNumberHelper);
-  Ember.Handlebars.registerBoundHelper('format-money', formatMoneyHelper);
+  helper('format-number', formatNumberHelper);
+  helper('format-money', formatMoneyHelper);
 };
 
 export default {
