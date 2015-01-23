@@ -9,6 +9,9 @@ Just add like any other ember-cli addon:
 
 `npm install ember-cli-accounting --save-dev`
 
+Version 0.1.0 only works with HTMLBars (and therefore with ember >= 1.10.0)
+Use 0.4.0 with ember <= 1.9. Exact same funcionality.
+
 ## Usage
 
 ### Accounting functions

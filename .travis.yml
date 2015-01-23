@@ -14,15 +14,14 @@ before_install:
 install:
   - "npm install -g bower"
   - "npm install"
-  - "./bin/select-ember-version.js"
+  # - "./bin/select-ember-version.js"
   - "bower install"
 
 script:
   - npm test
 
-env:
-  matrix:
-    - EMBER_CHANNEL=release
-    - EMBER_CHANNEL=beta
-    - EMBER_CHANNEL=canary
-    - EMBER_CHANNEL=canary HTMLBARS=true
+# env:
+#   matrix:
+#     - EMBER_CHANNEL=release
+#     - EMBER_CHANNEL=beta
+#     - EMBER_CHANNEL=canary
