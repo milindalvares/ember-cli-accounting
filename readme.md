@@ -3,14 +3,14 @@
 This is a port of the great [accounting.js](https://github.com/openexchangerates/accounting.js) library to
 ES6 modules that integrates seamlessly with ember-cli.
 
-## Instalation
+## Installation
 
 Just add like any other ember-cli addon:
 
 `npm install ember-cli-accounting --save-dev`
 
 Version 0.1.0 only works with HTMLBars (and therefore with ember >= 1.10.0)
-Use 0.4.0 with ember <= 1.9. Exact same funcionality.
+Use 0.0.4 with ember <= 1.9. Exact same funcionality.
 
 ## Usage
 
