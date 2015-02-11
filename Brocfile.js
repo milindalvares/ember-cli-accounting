@@ -3,7 +3,11 @@
 
 var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
-var app = new EmberAddon();
+var app = new EmberAddon({
+  vendorFiles: {
+    'handlebars.js': null // Prevent handlebars from being loaded into vendor.js.
+  }
+});
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
