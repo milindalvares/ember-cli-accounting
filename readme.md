@@ -9,8 +9,8 @@ Just add like any other ember-cli addon:
 
 `npm install ember-cli-accounting --save-dev`
 
-Version 0.1.0 only works with HTMLBars (and therefore with ember >= 1.10.0)
-Use 0.0.4 with ember <= 1.9. Exact same funcionality.
+**Important:** Version 0.1.0 (and beyond) only works with HTMLBars (and therefore with ember >= 1.10.0)
+Use version 0.0.4 with Ember <= 1.9. Exact same funcionality.
 
 ## Usage
 
@@ -49,7 +49,7 @@ Any option not set will have the usual default value:
 Although this is almost a 1:1 port of accountant.js, there is a few differences:
 
 * Each function of accountant.js lives in its own module, so you can only import those functions you want to use.
-* Removed some polifills for `Array.isArray`, `Array.prototype.map` and `Object.prototype.toString`. 
+* Removed some polifills for `Array.isArray`, `Array.prototype.map` and `Object.prototype.toString`.
 They are not required in modern browsers, and ember.js (unless you opt-out with `EXTEND_PROTOTYPES = false`) already provides polifills for those functions.
 * More tests than the original.
 * Enforced jshint. Cleaner code.
