@@ -44,6 +44,26 @@ Any option not set will have the usual default value:
 {{format-number "1234.567" precision=2}} <!-- "1,234.57" -->
 ```
 
+### Config default options
+
+You can use an initializer to set some default values at initializations and avoid having to 
+repeat over and over the options in the helpers.
+
+Use something like this:
+```js
+// app/initializers/accounting.js
+import { currency, number } from "accounting/settings";
+
+export default {
+  name: 'accounting.js',
+  initialize: function() {
+    currency.symbol = "€";
+    number.decimal = ",";
+    number.thousand = ".";
+  }
+};
+```
+
 ## Differences with accounting.js
 
 Although this is almost a 1:1 port of accountant.js, there is a few differences:
