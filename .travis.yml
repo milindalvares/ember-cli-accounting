@@ -12,16 +12,9 @@ before_install:
   - "npm install -g npm@^2"
 
 install:
-  - "npm install -g bower"
-  - "npm install"
-  # - "./bin/select-ember-version.js"
-  - "bower install"
+  - npm install -g bower
+  - npm install
+  - bower install
 
 script:
   - npm test
-
-# env:
-#   matrix:
-#     - EMBER_CHANNEL=release
-#     - EMBER_CHANNEL=beta
-#     - EMBER_CHANNEL=canary

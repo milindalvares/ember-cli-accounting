@@ -1,3 +1,4 @@
+import { test, module } from 'qunit';
 import { currency } from "accounting/settings";
 import formatMoney from "accounting/format-money";
 
@@ -16,6 +17,6 @@ module("settings", {
   }
 });
 
-test("settings can be changed", function() {
-  equal(formatMoney(123), "123.00€", 'Default settings have been changed');
+test("settings can be changed", function(assert) {
+  assert.equal(formatMoney(123), "123.00€", 'Default settings have been changed');
 });
