@@ -6,5 +6,10 @@ export default {
     currency.symbol = "€";
     number.decimal = ",";
     number.thousand = ".";
+    currency.format = {
+      pos : "%s %v",
+      neg : "%s (%v)",
+      zero: "%s  -- "
+    };
   }
 };
