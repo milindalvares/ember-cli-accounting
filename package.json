@@ -9,7 +9,7 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:testall"
+    "test": "ember try ember-release"
   },
   "repository": {
     "type": "git",
