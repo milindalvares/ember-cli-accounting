@@ -1,2 +1,2 @@
-import Helper from 'basegame/helpers/format-number';
+import Helper from 'accounting/helpers/format-number';
 export default Helper;

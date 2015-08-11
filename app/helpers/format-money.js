@@ -1,2 +1,2 @@
-import Helper from 'basegame/helpers/format-money';
+import Helper from 'accounting/helpers/format-money';
 export default Helper;
