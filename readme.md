@@ -7,10 +7,16 @@ ES6 modules that integrates seamlessly with ember-cli.
 
 Just add like any other ember-cli addon:
 
-`npm install ember-cli-accounting --save-dev`
+* `ember install ember-cli-accounting`
 
-**Important:** Version 0.1.0 (and beyond) only works with HTMLBars (and therefore with ember >= 1.10.0)
-Use version 0.0.4 with Ember <= 1.9. Exact same funcionality.
+## Ember compatiblity
+
+Version 1.0.0 and beyond use `Ember.Helper` and helper's autoregistration, and are only compatible 
+with Ember 1.13 and Ember 2.0+
+
+Version 0.1.X requires HTMLBars, to works with ember 1.10+, including 1.13, but not with Ember 2.0
+
+If you are in an older than 1.10 use version 0.0.4
 
 ## Usage
 
