@@ -1,5 +1,10 @@
 # ember-cli-accounting changelog
 
+### 1.0.0 Final Release
+* [BREAKING CHANGE] Only works with Ember 1.13+ (including Ember 2.0) 
+* Now that Ember has a stable public API this can be considered stable. Future versions if any
+  will track improvements in accounting.js itself.
+
 ### 0.1.0
 * [BREAKING CHANGE] Only works with HTMLBars. No new functionalities. 
   Use 0.0.4 if you need to use it in ember < 1.10.0
