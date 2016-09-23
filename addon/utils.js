@@ -1,4 +1,8 @@
 import { currency } from "./settings";
+import Ember from 'ember';
+
+var assign = Ember.assign || Ember.merge;
+
 /**
  * Extends an object with a defaults object, similar to underscore's _.defaults
  *
@@ -6,7 +10,7 @@ import { currency } from "./settings";
  */
 function defaults(object, defs) {
   var key;
-  object = object || {};
+  object = assign({}, object);
   defs = defs || {};
   // Iterate over object non-prototype properties:
   for (key in defs) {
@@ -29,10 +33,18 @@ function checkPrecision(val, base) {
 }
 
 /**
+ * Returns the toString representation of an object even when the object 
+ * does not support `toString` out of the box, i.e. `EmptyObject`.
+ */
+function toString(obj) {
+  return Object.prototype.toString.call(obj);
+}
+
+/**
  * Tests whether supplied parameter is a true object
  */
 function isObject(obj) {
-  return obj && obj.toString() === '[object Object]';
+  return obj && toString(obj) === '[object Object]';
 }
 
 /**
