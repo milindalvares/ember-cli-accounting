@@ -5,13 +5,13 @@ import formatMoney from "accounting/format-money";
 var symbol, format;
 
 module("settings", {
-  setup: function(){
+  beforeEach(){
     symbol = currency.symbol;
     format = currency.format;
     currency.symbol = "€";
     currency.format = "%v%s";
   },
-  teardown: function(){
+  afterEach(){
     currency.symbol = symbol;
     currency.format = format;
   }
