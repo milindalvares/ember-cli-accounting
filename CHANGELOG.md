@@ -1,5 +1,8 @@
 # ember-cli-accounting changelog
 
+### 2.0.0
+* Drop support for node 0.10/0.12 and Ember < 2.4 (if might work, but I don't test it anymore)
+
 ### 1.0.2
 * Fixed compatibility with Glimmer2
 
