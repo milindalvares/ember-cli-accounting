@@ -10,6 +10,10 @@ test("unformat()", function(assert) {
 	assert.equal(unformat("string"), 0, 'Returns 0 for a string with no numbers');
 	assert.equal(unformat({joss:1}), 0, 'Returns 0 for object');
 
+	assert.equal(unformat('Bs.123.56'), 123.56, 'Can unformat Bs.');
+	assert.equal(unformat('Rs. 123.56'), 123.56, 'Can unformat Rs.');
+	assert.equal(unformat('\u2212123.56'), -123.56, 'Can unformat minus sign');
+
 	number.decimal = ',';
 	assert.equal(unformat("100,00"), 100, 'Uses decimal separator from settings');
 	assert.equal(unformat("¤1.000,00"), 1000, 'Uses decimal separator from settings');
