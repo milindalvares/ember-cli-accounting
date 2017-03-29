@@ -43,10 +43,13 @@ function unformat(value, decimal) {
 
    // Build regex to strip out everything except digits, decimal point and minus sign:
   var regex = new RegExp("[^0-9-" + decimal + "]", ["g"]);
+  var decimalClean = new RegExp('^\\' + decimal);
   var unformatted = parseFloat(
     ("" + value)
+    .replace(/\u2212/g, '-')    // replace &minus; with '-'
     .replace(/\((.*)\)/, "-$1") // replace bracketed values with negatives
     .replace(regex, '')         // strip out any cruft
+    .replace(decimalClean, '')  // strip out leading decimals
     .replace(decimal, '.')      // make sure decimal point is standard
   );
 
