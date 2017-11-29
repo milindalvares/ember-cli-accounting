@@ -1,5 +1,8 @@
 # ember-cli-accounting changelog
 
+### Unreleased
+* [ENHALCEMENT] Updated to ember-cli 2.17.0
+
 ### 2.0.1
 - [BUGFIX] Do not include /typings folder in published package.
 
