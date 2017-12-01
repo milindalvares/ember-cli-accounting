@@ -24,3 +24,7 @@ test("formatNumber()", function(assert) {
   var formattedRecursively = formatNumber(numbers);
   assert.equal(formattedRecursively.toString(), formattedManually.toString(), 'can recursively format multi-dimensional arrays');
 });
+
+test("handles -0.00 stripping -", function(assert) {
+  assert.equal(formatNumber(-0.0000000567, 2), "0.00", 'Removes - from -0.00');
+});
