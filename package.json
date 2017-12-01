@@ -28,7 +28,7 @@
     "url": "git://github.com/cibernox/ember-cli-accounting.git"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.6.0"
+    "ember-cli-babel": "^6.10.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
