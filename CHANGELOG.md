@@ -1,7 +1,8 @@
 # ember-cli-accounting changelog
 
-### Unreleased
-* [ENHALCEMENT] Updated to ember-cli 2.17.0
+### 2.0.2
+* [ENHANCEMENT] Updated to ember-cli 2.17.0
+* [BUGFIX] Fix issues with rounding causing `-0` to be displayed
 
 ### 2.0.1
 - [BUGFIX] Do not include /typings folder in published package.
