@@ -66,7 +66,7 @@ function formatMoney(number, symbol, precision, thousand, decimal, format) {
 
   //Handle case where precision is expressed as {minPrecision=xx, maxPrecision=xx}
   let minPrecision, maxPrecision;
-  if (opts.precision instanceof Object) {
+  if (typeof opts.precision === 'object') {
     minPrecision = opts.precision.minPrecision;
     maxPrecision = opts.precision.maxPrecision;
     if (isPresent(maxPrecision)) {
