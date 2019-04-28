@@ -75,8 +75,8 @@ export default {
 Although this is almost a 1:1 port of accountant.js, there is a few differences:
 
 * Each function of accountant.js lives in its own module, so you can only import those functions you want to use.
-* Removed some polifills for `Array.isArray`, `Array.prototype.map` and `Object.prototype.toString`.
-They are not required in modern browsers, and ember.js (unless you opt-out with `EXTEND_PROTOTYPES = false`) already provides polifills for those functions.
+* Removed some polyfills for `Array.isArray`, `Array.prototype.map` and `Object.prototype.toString`.
+They are not required in modern browsers, and ember.js (unless you opt-out with `EXTEND_PROTOTYPES = false`) already provides polyfills for those functions.
 * More tests than the original.
 * Enforced jshint. Cleaner code.
 
