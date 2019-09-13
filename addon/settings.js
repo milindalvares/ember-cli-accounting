@@ -4,13 +4,15 @@ var currency = {
   decimal : ".",    // decimal point separator
   thousand : ",",   // thousands separator
   precision : 2,    // decimal places
-  grouping : 3      // digit grouping (not implemented yet)
+  grouping : 3,     // digit grouping (not implemented yet)
+  rounded: false,   // rounds number when has no decimals
 };
 var number = {
   precision : 0,    // default precision on numbers is 0
   grouping : 3,     // digit grouping (not implemented yet)
   thousand : ",",
-  decimal : "."
+  decimal : ".",
+  rounded: false,   // rounds number when has no decimals
 };
 
 export { currency, number };
