@@ -19,7 +19,7 @@ import { number } from "./settings";
  * @method unformat
  * @for accounting
  * @param {String|Array<String>} value The string or array of strings containing the number/s to parse.
- * @param {Number}               decimal Number of decimal digits of the resultant number
+ * @param {String}               (optional) the value of the decimal separator, e.g. "." in USD or "," in EUR
  * @return {Float} The parsed number
  */
 function unformat(value, decimal) {
