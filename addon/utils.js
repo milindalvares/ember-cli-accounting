@@ -1,7 +1,4 @@
 import { currency } from "./settings";
-import Ember from 'ember';
-
-var assign = Ember.assign || Ember.merge;
 
 /**
  * Extends an object with a defaults object, similar to underscore's _.defaults
@@ -10,7 +7,7 @@ var assign = Ember.assign || Ember.merge;
  */
 function defaults(object, defs) {
   var key;
-  object = assign({}, object);
+  object = Object.assign({}, object);
   defs = defs || {};
   // Iterate over object non-prototype properties:
   for (key in defs) {
