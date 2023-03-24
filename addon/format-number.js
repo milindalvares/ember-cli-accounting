@@ -50,8 +50,9 @@ function formatNumber(number, precision, thousand, decimal) {
   const usePrecision = checkPrecision(opts.precision);
 
   // Do some calc:
-  const fixedNumber = toFixed(number || 0, usePrecision);
-  const negative = fixedNumber < 0 ? "-" : "";
+  const initiallyNegative = `${number}`.indexOf("-") === 0;
+  const fixedNumber = toFixed(Math.abs(number) || 0, usePrecision);
+  const negative = initiallyNegative && fixedNumber > 0 ? "-" : "";
   const base = String(parseInt(Math.abs(fixedNumber), 10));
   const mod = base.length > 3 ? base.length % 3 : 0;
 

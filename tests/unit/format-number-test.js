@@ -28,3 +28,19 @@ test("formatNumber()", function(assert) {
 test("handles -0.00 stripping -", function(assert) {
   assert.equal(formatNumber(-0.0000000567, 2), "0.00", 'Removes - from -0.00');
 });
+
+test("Use 'Commercial Rounding' rule to treat positive and negative values symmetrically", function(assert) {
+  assert.equal(formatNumber(-0.95, 1), "-1.0", 'Rounds -0.95 to -1.0');
+  assert.equal(formatNumber(-0.96, 1), "-1.0", 'Rounds -0.96 to -1.0');
+  assert.equal(formatNumber(-0.94, 1), "-0.9", 'Rounds -0.94 to -0.9');
+  assert.equal(formatNumber(-0.85, 1), "-0.9", 'Rounds -0.85 to -0.9');
+  assert.equal(formatNumber(-0.86, 1), "-0.9", 'Rounds -0.86 to -0.9');
+  assert.equal(formatNumber(-0.84, 1), "-0.8", 'Rounds -0.84 to -0.8');
+
+  assert.equal(formatNumber(0.95, 1), "1.0", 'Rounds 0.95 to 1.0');
+  assert.equal(formatNumber(0.96, 1), "1.0", 'Rounds 0.96 to 1.0');
+  assert.equal(formatNumber(0.94, 1), "0.9", 'Rounds 0.94 to 0.9');
+  assert.equal(formatNumber(0.85, 1), "0.9", 'Rounds 0.85 to 0.9');
+  assert.equal(formatNumber(0.86, 1), "0.9", 'Rounds 0.86 to 0.9');
+  assert.equal(formatNumber(0.84, 1), "0.8", 'Rounds 0.84 to 0.8');
+});
