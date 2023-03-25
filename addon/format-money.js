@@ -35,13 +35,14 @@ import toFixed from "./to-fixed";
  * @param {String}        [thousand=','] String with the thousands separator.
  * @param {String}        [decimal="."] String with the decimal separator.
  * @param {String}        [format="%s%v"] String with the format to apply, where %s is the currency symbol and %v is the value.
+ * @param {Boolean}       [rounded=false] Used to remove all trailing zeros.
  * @return {String} The given number properly formatted as money.
  */
-function formatMoney(number, symbol, precision, thousand, decimal, format) {
+function formatMoney(number, symbol, precision, thousand, decimal, format, rounded) {
   // Resursively format arrays:
   if (Array.isArray(number)) {
     return number.map(function(val){
-      return formatMoney(val, symbol, precision, thousand, decimal, format);
+      return formatMoney(val, symbol, precision, thousand, decimal, format, rounded);
     });
   }
 
@@ -55,7 +56,8 @@ function formatMoney(number, symbol, precision, thousand, decimal, format) {
         precision : precision,
         thousand : thousand,
         decimal : decimal,
-        format : format
+        format : format,
+        rounded : rounded
       }),
       currency
     );
@@ -72,7 +74,7 @@ function formatMoney(number, symbol, precision, thousand, decimal, format) {
   const useFormat = fixedNumber > 0 ? formats.pos : fixedNumber < 0 ? formats.neg : formats.zero;
 
   // Return with currency symbol added:
-  return useFormat.replace('%s', opts.symbol).replace('%v', formatNumber(Math.abs(number), checkPrecision(opts.precision), opts.thousand, opts.decimal));
+  return useFormat.replace('%s', opts.symbol).replace('%v', formatNumber(Math.abs(number), checkPrecision(opts.precision), opts.thousand, opts.decimal, opts.rounded));
 }
 
 export default formatMoney;

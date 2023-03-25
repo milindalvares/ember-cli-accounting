@@ -23,13 +23,14 @@ const numberSettings = number;
  * @param {Integer}       [precision=2] Number of decimal digits
  * @param {String}        [thousand=','] String with the thousands separator.
  * @param {String}        [decimal="."] String with the decimal separator.
+ * @param {Boolean}       [rounded=false] Used to remove all trailing zeros.
  * @return {String} The given number properly formatted.
  */
-function formatNumber(number, precision, thousand, decimal) {
+function formatNumber(number, precision, thousand, decimal, rounded) {
   // Resursively format arrays:
   if (Array.isArray(number)) {
     return number.map(function(val) {
-      return formatNumber(val, precision, thousand, decimal);
+      return formatNumber(val, precision, thousand, decimal, rounded);
     });
   }
 
@@ -41,7 +42,8 @@ function formatNumber(number, precision, thousand, decimal) {
       (isObject(precision) ? precision : {
         precision : precision,
         thousand : thousand,
-        decimal : decimal
+        decimal : decimal,
+        rounded : rounded
       }),
       numberSettings
     );
@@ -56,7 +58,19 @@ function formatNumber(number, precision, thousand, decimal) {
   const mod = base.length > 3 ? base.length % 3 : 0;
 
   // Format the number:
-  return negative + (mod ? base.substr(0, mod) + opts.thousand : "") + base.substr(mod).replace(/(\d{3})(?=\d)/g, "$1" + opts.thousand) + (usePrecision ? opts.decimal + toFixed(Math.abs(number), usePrecision).split('.')[1] : "");
+  let result = negative +
+    (mod ? base.substr(0, mod) + opts.thousand : "") +
+    base.substr(mod).replace(/(\d{3})(?=\d)/g, "$1" + opts.thousand) +
+    (usePrecision ? opts.decimal + toFixed(Math.abs(number), usePrecision).split('.')[1] : "");
+
+  if (opts.rounded) {
+    // If have only trailing zeros after precision remove all
+    var regex = new RegExp(`${opts.decimal}0{${usePrecision}}`, 'g');
+
+    result = result.replace(regex, "");
+  }
+
+  return result;
 }
 
 export default formatNumber;
