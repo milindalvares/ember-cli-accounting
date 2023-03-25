@@ -33,3 +33,30 @@ test("handles negative values", function(assert) {
 test("handles $-0.00 stripping -", function(assert) {
   assert.equal(formatMoney(-0.0000000567), "$0.00", 'Removes - from -0.00');
 });
+
+test("handles specifying precision the simple way", function(assert) {
+  assert.equal(formatMoney(80.07785, { precision: 3}), "$80.078", `is $80.078 when moneyString=80.07785 and precision=3`);
+});
+
+test("handles minPrecision and maxPrecision", function(assert) {
+  let moneyString = '80.0760';
+  const options = {
+    precision: {
+      minPrecision: 2,
+      maxPrecision: 4,
+    }
+  };
+  let params = [moneyString];
+  let expected = '$80.076';
+  assert.equal(formatMoney(params, options), expected, `is ${expected} when moneyString=${moneyString}`);
+
+  moneyString = '0.0750';
+  params = [moneyString];
+  expected = '$0.075';
+  assert.equal(formatMoney(params, options), expected, `is ${expected} when moneyString=${moneyString}`);
+
+  moneyString = '57.6000';
+  params = [moneyString];
+  expected = '$57.60';
+  assert.equal(formatMoney(params, options), expected, `is ${expected} when moneyString=${moneyString}`);
+});

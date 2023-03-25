@@ -3,6 +3,7 @@ import formatNumber from "./format-number";
 import { currency } from "./settings";
 import { defaults, checkPrecision, isObject, checkCurrencyFormat } from "./utils";
 import toFixed from "./to-fixed";
+import { isPresent } from '@ember/utils';
 
 /**
  * Format a number into currency
@@ -63,6 +64,18 @@ function formatMoney(number, symbol, precision, thousand, decimal, format) {
   // Check format (returns object with pos, neg and zero):
   const formats = checkCurrencyFormat(opts.format);
 
+  //Handle case where precision is expressed as {minPrecision=xx, maxPrecision=xx}
+  let minPrecision, maxPrecision;
+  if (typeof opts.precision === 'object') {
+    minPrecision = opts.precision.minPrecision;
+    maxPrecision = opts.precision.maxPrecision;
+    if (isPresent(maxPrecision)) {
+      opts.precision = maxPrecision;
+    } else {
+      opts.precision = currency.precision;
+    }
+  }
+
   // Clean up precision
   const usePrecision = checkPrecision(opts.precision);
 
@@ -72,7 +85,11 @@ function formatMoney(number, symbol, precision, thousand, decimal, format) {
   const useFormat = fixedNumber > 0 ? formats.pos : fixedNumber < 0 ? formats.neg : formats.zero;
 
   // Return with currency symbol added:
-  return useFormat.replace('%s', opts.symbol).replace('%v', formatNumber(Math.abs(number), checkPrecision(opts.precision), opts.thousand, opts.decimal));
+  const formatted = useFormat.replace('%s', opts.symbol).replace('%v', formatNumber(Math.abs(number), checkPrecision(opts.precision), opts.thousand, opts.decimal));
+  if (isPresent(minPrecision)) {
+    return formatted.replace(new RegExp(`(\\.\\d{${minPrecision}}[1-9]*)(0+$)`), '$1');
+  }
+  return formatted;
 }
 
 export default formatMoney;
